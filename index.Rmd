@@ -1,7 +1,7 @@
 --- 
 knit: "bookdown::render_book"
 title: "The SWS Handbook for R Developers"
-author: "Bruno Caetano Vidigal, Nidal Ramadan and Ivan Sortino<address class='author_afil'>Statistician - ESS - Methodological Innovation Team</address>"
+author: "Methodological Innovation Team - ESS"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -41,8 +41,6 @@ knitr::include_graphics('images/sws_cover.png', dpi = NA)
 # **Preface** {-}
 
 ## **How to use this book** {-}
-
-
 
 The chapters are organized as follows: 
 
