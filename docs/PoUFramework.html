@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 PoU Framework | PoU in the SWS</title>
+  <meta name="description" content="The online book describes steps towards the implementation of the Prevalence of Undernourishment (PoU) into the Corporate Statistical Working System (SWS)" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 PoU Framework | PoU in the SWS" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/images/pou_sws_cover.png" />
+  <meta property="og:description" content="The online book describes steps towards the implementation of the Prevalence of Undernourishment (PoU) into the Corporate Statistical Working System (SWS)" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 PoU Framework | PoU in the SWS" />
+  
+  <meta name="twitter:description" content="The online book describes steps towards the implementation of the Prevalence of Undernourishment (PoU) into the Corporate Statistical Working System (SWS)" />
+  <meta name="twitter:image" content="/images/pou_sws_cover.png" />
+
+
+
+<meta name="date" content="2022-10-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="preface.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="ess.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#welcome" id="toc-welcome"><strong>Welcome</strong></a></li>
+<li><a href="preface.html#preface" id="toc-preface"><strong>Preface</strong></a>
+<ul>
+<li><a href="preface.html#how-to-use-this-book" id="toc-how-to-use-this-book"><strong>How to use this book</strong></a></li>
+<li><a href="preface.html#why-to-use-the-sws" id="toc-why-to-use-the-sws"><strong>Why to use the SWS</strong></a></li>
+<li><a href="preface.html#migration-actors" id="toc-migration-actors"><strong>Migration actors</strong></a></li>
+</ul></li>
+<li><a href="PoUFramework.html#PoUFramework" id="toc-PoUFramework"><span class="toc-section-number">1</span> <strong>PoU Framework</strong></a>
+<ul>
+<li><a href="PoUFramework.html#data-migration" id="toc-data-migration"><span class="toc-section-number">1.1</span> <strong>Data Migration</strong></a></li>
+<li><a href="PoUFramework.html#input-data" id="toc-input-data"><span class="toc-section-number">1.2</span> <strong>Input Data</strong></a>
+<ul>
+<li><a href="PoUFramework.html#dietary-energy-supply" id="toc-dietary-energy-supply"><span class="toc-section-number">1.2.1</span> <strong>Dietary Energy Supply</strong></a></li>
+<li><a href="PoUFramework.html#population-by-age-groups" id="toc-population-by-age-groups"><span class="toc-section-number">1.2.2</span> <strong>Population by age groups</strong></a></li>
+<li><a href="PoUFramework.html#crude-birth-rate" id="toc-crude-birth-rate"><span class="toc-section-number">1.2.3</span> <strong>Crude Birth Rate</strong></a></li>
+<li><a href="PoUFramework.html#under-five-mortality-rate" id="toc-under-five-mortality-rate"><span class="toc-section-number">1.2.4</span> <strong>Under-Five Mortality Rate</strong></a></li>
+<li><a href="PoUFramework.html#height-distribution-by-age-sex-classes" id="toc-height-distribution-by-age-sex-classes"><span class="toc-section-number">1.2.5</span> <strong>Height Distribution by age-sex classes</strong></a></li>
+<li><a href="PoUFramework.html#weight-distribution-for-ageheightlength" id="toc-weight-distribution-for-ageheightlength"><span class="toc-section-number">1.2.6</span> <strong>Weight Distribution for age/height/length</strong></a></li>
+<li><a href="PoUFramework.html#weight-gainenergy-requirement-per-kg-of-weight-gain" id="toc-weight-gainenergy-requirement-per-kg-of-weight-gain"><span class="toc-section-number">1.2.7</span> <strong>Weight gain/Energy Requirement per KG of Weight Gain</strong></a></li>
+<li><a href="PoUFramework.html#xcbs" id="toc-xcbs"><span class="toc-section-number">1.2.8</span> <strong>XCBS</strong></a></li>
+<li><a href="PoUFramework.html#pregnancy-allowance-pal" id="toc-pregnancy-allowance-pal"><span class="toc-section-number">1.2.9</span> <strong>Pregnancy Allowance (PAL)</strong></a></li>
+<li><a href="PoUFramework.html#waste" id="toc-waste"><span class="toc-section-number">1.2.10</span> <strong>Waste</strong></a></li>
+<li><a href="PoUFramework.html#ders" id="toc-ders"><span class="toc-section-number">1.2.11</span> <strong>DERs</strong></a></li>
+<li><a href="PoUFramework.html#cvy" id="toc-cvy"><span class="toc-section-number">1.2.12</span> <strong>CV|y</strong></a></li>
+<li><a href="PoUFramework.html#cvr" id="toc-cvr"><span class="toc-section-number">1.2.13</span> <strong>CV|r</strong></a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PoU in the SWS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="PoUFramework" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> <strong>PoU Framework</strong></h1>
+<p>The Prevalence of Undernourishment (PoU) is such a complex statistical process ran by the Food Security and Nutrition Statistics (FSNS) team in ESS.</p>
+<p>Its workflow is composed by several SWS objects - four plugins, three data sets and nine data tables. The image below illustrates those objects and how they interact with each other to compute the SDG indicator 2.1.1 in the system.</p>
+<p>It is worth highlighting that this is a proposal and changes may apply.</p>
+<div id="data-migration" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> <strong>Data Migration</strong></h2>
+<p>During the implementation of any statistical output in the SWS, one of the key moments is the migration of the legacy data. Seen for non-SWS users as only one simple operation, this step may become a challenge if the previous working system does not have a well-structured database. This is because the metadata attached to the data and its history itself is as important as the final output and there were cases in previous projects that the SWS/IT team had to deal with messy databases.</p>
+<p>Another point is that, there might have cases where areas/items/elements conversions need to be applied. Not to mention the conversion of flags to the SWS - SDMX flag system.</p>
+<p>For each disseminated data to be migrated to SWS there is a need to convert:</p>
+<ul>
+<li>areas to <code>geographicAreaM49</code>;</li>
+<li>items to <code>measuredItemCPC</code> (or another code list that contains those items);</li>
+<li>elements to <code>measuredElement</code> (or another code list that contains those elements);</li>
+<li>flags to SWS flag system (<code>flagObservationStatus</code> and <code>flagMethod</code>).</li>
+</ul>
+<p>In this specific project, there is a need to create additional codes (in the current code lists) and also new code lists to accommodate all the input and output data.</p>
+</div>
+<div id="input-data" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> <strong>Input Data</strong></h2>
+<p>FAO is responsible for the dissemination of several statistical outputs including data on agriculture production and trade, forestry, fisheries, fertilizers, pesticides, producer prices and others. Along with the data, it is also important for transparency purposes to release information regarding its quality. Thus this book describes in details the process to compile the QI for each of these outputs, as they are composed of differents kinds of elements, items and areas. Moreover, each statistical process may have its own data processing, from harvesting to storage, with peculiarities that need to be taken into consideration when calculating the QI.</p>
+<div id="dietary-energy-supply" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> <strong>Dietary Energy Supply</strong></h3>
+<p><a href="https://population.un.org/wpp/Download/Standard/MostUsed/"><em>Dietary Energy Supply (DES)</em></a> in kilocalories per
+person per day in a given country is <em>“the most important output of the Food Balance Sheet (FBS)”</em>, according to FAOSTAT. Its correspondent data set in the SWS is in the domain <code>Disseminated Datasets</code>, data set <code>FBS balanced diss</code>, from year 2010.
+Its legacy data with information before 2010 using the old methodology can also be found in the SWS.</p>
+</div>
+<div id="population-by-age-groups" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> <strong>Population by age groups</strong></h3>
+<p><a href="https://population.un.org/wpp/Download/Standard/MostUsed/"><em>Population by age groups</em></a> are disseminated in… Its correspondent data set in the SWS is in the domain <code>Population</code>, data set <code>Population</code>.</p>
+</div>
+<div id="crude-birth-rate" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> <strong>Crude Birth Rate</strong></h3>
+<p><a href="https://population.un.org/wpp/Download/Standard/MostUsed/"><em>Crude Birth Rate</em></a> is the annual number of live births per 1,000 population. Its source are both the civil registration and surveys/censuses. Its correspondent data set in the SWS is in the domain <code>Population</code>, data set <code>Population</code>.</p>
+</div>
+<div id="under-five-mortality-rate" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> <strong>Under-Five Mortality Rate</strong></h3>
+<p><a href="https://data.worldbank.org/indicator/SP.DYN.IMRT.IN"><em>Under-Five Mortality Rate</em></a> are estimates developed by the UN Inter-agency Group for Child Mortality Estimation ( UNICEF, WHO, World Bank, UN DESA Population Division ) at childmortality.org. Its correspondent data set in the SWS is in the domain <code>PoU</code>, data set …</p>
+</div>
+<div id="height-distribution-by-age-sex-classes" class="section level3" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> <strong>Height Distribution by age-sex classes</strong></h3>
+<p><em>Height Distribution by age-sex classes</em> is collected by the FSNS team from various sources. These data are stored as a Datatable object in the SWS, domain <strong>PoU</strong>.</p>
+</div>
+<div id="weight-distribution-for-ageheightlength" class="section level3" number="1.2.6">
+<h3><span class="header-section-number">1.2.6</span> <strong>Weight Distribution for age/height/length</strong></h3>
+<p><a href="https://www.who.int/tools/growth-reference-data-for-5to19-years/indicators"><em>Weight Distribution for age/height/length</em></a> are a set of z-scores tables disseminated by the World Health Organization (WHO). Their correspondent data are found in SWS/Datatables, in the domain <strong>PoU</strong>.</p>
+</div>
+<div id="weight-gainenergy-requirement-per-kg-of-weight-gain" class="section level3" number="1.2.7">
+<h3><span class="header-section-number">1.2.7</span> <strong>Weight gain/Energy Requirement per KG of Weight Gain</strong></h3>
+<p><a href="https://extranet.who.int/iris/restricted/bitstream/handle/10665/38768/9241541660.pdf;jsessionid=698CB771DA8B5B38197B01BC5651DC62?sequence=1"><em>Weight gain/Energy Requirement per KG of Weight Gain</em></a> data by gender and age class are taken from “WHO, Measuring change in nutritional status - Guidelines for assessing the nutritional impact of supplementary feeding programmes for vulnerable people, World Health Organization, 1983, Geneva”, tables 22, 23, 24, and 25. For MDER, ADER, and XDER we use respectively the 5th, the 50th and the 95th percentiles. Their correspondent data are found in SWS/Datatables, in the domain <strong>PoU</strong>.</p>
+</div>
+<div id="xcbs" class="section level3" number="1.2.8">
+<h3><span class="header-section-number">1.2.8</span> <strong>XCBS</strong></h3>
+<p><a href="https://www.fao.org/giews/data-tools/en/"><em>XCBS</em></a> is the percentage of changes in food availability. It comes from an unique database created and continuously kept up to date by GIEWS/Basic Foodstuffs Team of the Markets and Trade Division of FAO. The data are shared to the FSNS team through an excel file. Their correspondent data are found in SWS/Datatables, in the domain <strong>PoU</strong>.</p>
+</div>
+<div id="pregnancy-allowance-pal" class="section level3" number="1.2.9">
+<h3><span class="header-section-number">1.2.9</span> <strong>Pregnancy Allowance (PAL)</strong></h3>
+<p>[<em>Pregnancy Allowance (PAL)</em>] is one parameter with value <strong>210</strong> and is in the SWS/Datatables, in the domain <strong>PoU</strong>.</p>
+</div>
+<div id="waste" class="section level3" number="1.2.10">
+<h3><span class="header-section-number">1.2.10</span> <strong>Waste</strong></h3>
+<p>[<em>Waste</em>] External source - The FSNS will upload it as Datatable.</p>
+</div>
+<div id="ders" class="section level3" number="1.2.11">
+<h3><span class="header-section-number">1.2.11</span> <strong>DERs</strong></h3>
+<p>[<em>DERS</em>]</p>
+</div>
+<div id="cvy" class="section level3" number="1.2.12">
+<h3><span class="header-section-number">1.2.12</span> <strong>CV|y</strong></h3>
+<p>[<em>CV|y</em>]</p>
+</div>
+<div id="cvr" class="section level3" number="1.2.13">
+<h3><span class="header-section-number">1.2.13</span> <strong>CV|r</strong></h3>
+<p>[<em>CV|r</em>]</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="preface.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+book_filename: "bookdown-SWS Handbook"
+language:
+  ui:
+    chapter_name: "Chapter "
+appendix_name: ''
+output_dir: "docs"    
+delete_merged_file: true
+always_allow_html: yes

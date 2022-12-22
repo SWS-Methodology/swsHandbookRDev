@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Preface | The SWS Handbook for R Developers</title>
+  <meta name="description" content="The online book describes steps towards the implementation of R plugins in the Statistical Working System. It is also a resource for tips &amp; tricks." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Preface | The SWS Handbook for R Developers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/images/sws_cover.png" />
+  <meta property="og:description" content="The online book describes steps towards the implementation of R plugins in the Statistical Working System. It is also a resource for tips &amp; tricks." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Preface | The SWS Handbook for R Developers" />
+  
+  <meta name="twitter:description" content="The online book describes steps towards the implementation of R plugins in the Statistical Working System. It is also a resource for tips &amp; tricks." />
+  <meta name="twitter:image" content="/images/sws_cover.png" />
+
+<meta name="author" content="Bruno Caetano Vidigal, Nidal Ramadan and Ivan Sortino ¶  ¶ Statistician - ESS - Methodological Innovation Team ¶ " />
+
+
+<meta name="date" content="2022-12-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="Rplugins.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="ess.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#welcome" id="toc-welcome"><strong>Welcome</strong></a></li>
+<li><a href="preface.html#preface" id="toc-preface"><strong>Preface</strong></a>
+<ul>
+<li><a href="preface.html#how-to-use-this-book" id="toc-how-to-use-this-book"><strong>How to use this book</strong></a></li>
+<li><a href="preface.html#why-to-use-the-sws" id="toc-why-to-use-the-sws"><strong>Why to use the SWS</strong></a></li>
+</ul></li>
+<li><a href="Rplugins.html#Rplugins" id="toc-Rplugins"><span class="toc-section-number">1</span> <strong>R Plugins</strong></a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The SWS Handbook for R Developers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="preface" class="section level1 unnumbered">
+<h1><strong>Preface</strong></h1>
+<div id="how-to-use-this-book" class="section level2 unnumbered">
+<h2><strong>How to use this book</strong></h2>
+<p>The chapters are organized as follows:</p>
+</div>
+<div id="why-to-use-the-sws" class="section level2 unnumbered">
+<h2><strong>Why to use the SWS</strong></h2>
+<p>The Statistical Working System (SWS) is a corporate system that supports data collection, processing and validation, metadata management, and quality assessment of FAO’s main statistical domains in line with the Generic Statistical Business Process Model. It has a dual nature – both technological and statistical – and for this reason, is developed by two different teams (the IT Division [CSI] and the Statistics Division [ESS]). The SWS provides an end-to-end solution for inputting and storing raw data, performing automated statistical processes (e.g. imputation, validation, etc.), and producing data that are ready for dissemination. Moreover, the reasons why you should use the SWS are:</p>
+<ul>
+<li>The SWS improves data quality by <strong>centralizing and standardizing</strong> the maintenance of data, classification systems, methodologies, and standards.</li>
+<li>The SWS is <strong>cost-efficient</strong> in terms of statistical development and functionalities:
+<ul>
+<li>Technical units can adopt methods and even pieces of codes developed for other units: documentation and scripts are open;</li>
+<li>Users have direct access to some common datasets, thus removing duplication of efforts;</li>
+<li>New functionalities reflect the requirements of all users and are available to all users, with economies of scale on IT development.</li>
+</ul></li>
+<li>Users have <strong>full control of the quality</strong> of the data they are producing:
+<ul>
+<li>Increased use of advanced and semi-automated statistical methods reduce the need for manual interventions and ensure that results are reproducible;</li>
+<li>Establishment and use of a ‘basic’ set of quality and performance indicators for processes and outputs based on the FAO Statistical Quality Assurance Framework (SQAF);</li>
+<li>Assessment and publication of quality indicators on a regular basis.</li>
+</ul></li>
+<li>The SWS ensures <strong>corporate data consistency</strong> through the adoption of statistical standards. In particular, the SWS
+<ul>
+<li>Facilitates the adoption of corporate standard classifications, metadata and code lists through seamless integration with the corporate Reference Data Management system;</li>
+<li>Reduces the fragmentation and duplication of sources (e.g. population data), thus reducing inconsistencies across technical units;</li>
+<li>Provides flexible tools for a wide range of data collection processes including web data scraping and questionnaire management, thus reducing the duplication of data collection efforts.</li>
+</ul></li>
+<li>The SWS preserves <strong>institutional knowledge</strong> by recording the history of data revisions, automating methodology and calculations, and providing end users with unambiguous instructions to follow.</li>
+</ul>
+<p>Go to the <a href="https://sws.fao.org/">Statistical Working System</a> website (restricted access).</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Rplugins.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
