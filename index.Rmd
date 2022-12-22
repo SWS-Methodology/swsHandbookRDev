@@ -46,12 +46,17 @@ knitr::include_graphics('images/sws_cover.png', dpi = NA)
 The chapters are organized as follows: 
 
 ```{r chapters, width='100%', echo=FALSE, message=FALSE}
+
 require(data.table)
+
 suppressWarnings(suppressMessages(require(kableExtra)))
+
 d = data.table::fread("tables/chapters.csv")
+
 knitr::kable(d) %>%
   row_spec(0, background = "#5191c8") %>% 
   kableExtra::kable_styling(font_size = 12)
+
 ```
 
 ## **Why to use the SWS** {-}
