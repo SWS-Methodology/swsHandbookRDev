@@ -1,5 +1,0 @@
-# **R Plugins** {#Rplugins}
-
-In this chapter ...
-
-

@@ -1,1 +1,1 @@
-Rplugins
+RPlugin
